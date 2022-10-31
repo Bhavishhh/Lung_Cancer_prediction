@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>lung Cancer Recurrence Prediction</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style1.css')}}">
+        <link rel="icon" href="data:,">
+    </head>
+    <body>
+         <div class="container">
+            <h1>
+                LUNG CANCER RISK ASSESSMENT
+            </h1>
+        </div>
+        <div class="container">
+            <form action="{{ url_for('predict')}}" method="POST">
+                <div class="res">
+                    <p>RESULT:</p>
+                    {{prediction_text}}
+                </div>
+            </form>
+    </body>
+</html>
